@@ -99,7 +99,7 @@ app.get("/cipher", (req, res) => {
   const numShift = parseInt(shift);
 
   //need to loop through text
-  let encrypedText = "";
+  let encrypedText = String.fromCharCode(text);
 
   for (let i = 0; i < text.length; i++) {
     encrypedText += text[i];
