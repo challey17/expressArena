@@ -111,3 +111,34 @@ app.get("/cipher", (req, res) => {
 app.listen(8000, () => {
   console.log("Express server listening on http://localhost:8000/");
 });
+
+app.get("/hello", (req, res) => {
+  res.status(200).send("Hello, everything was ok!");
+});
+
+app.get("/video", (req, res) => {
+  const video = {
+    title: "Cats falling over",
+    description: "15 minutes of hilarious fun as cats fall over",
+    length: "15.40",
+  };
+  res.json(video);
+});
+
+app.get("/colors", (req, res) => {
+  const colors = [
+    {
+      name: "red",
+      rgb: "FF0000",
+    },
+    {
+      name: "green",
+      rgb: "00FF00",
+    },
+    {
+      name: "blue",
+      rgb: "0000FF",
+    },
+  ];
+  res.json(colors);
+});
